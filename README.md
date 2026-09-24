@@ -21,6 +21,7 @@
   - [Indoor Benchmarks and Instruction Variants](#task-foundations)
   - [Continuous and Dynamic Environments](#continuous-navigation)
   - [Dialog and Interactive Navigation](#dialog-navigation)
+- [Evaluation & Metrics](#evaluation--metrics)
 - **Methods**
   - [Instruction Grounding and Progress Monitoring](#grounding-progress)
   - [Topological Mapping and Planning](#topological-planning)
@@ -76,6 +77,16 @@
 - <a id="paper-anna"></a>[**HANNA**: Help, Anna! Visual Navigation with Natural Multimodal Assistance via Retrospective Curiosity-Encouraging Imitation Learning](https://arxiv.org/abs/1909.01871) · 2019, EMNLP · `DE / Assistance` · [code](https://github.com/khanhptnk/hanna)
 - <a id="paper-just-ask"></a>[**Just Ask**: An Interactive Learning Framework for Vision and Language Navigation](https://arxiv.org/abs/1912.00915) · 2020, AAAI · `DE / Interaction`
 - <a id="paper-dialnav"></a>[**DialNav**: Multi-turn Dialog Navigation with a Remote Guide](https://openaccess.thecvf.com/content/ICCV2025/papers/Han_DialNav_Multi-turn_Dialog_Navigation_with_a_Remote_Guide_ICCV_2025_paper.pdf) · 2025, ICCV · `CCF-A` · `Dialog` — Remote guide must infer the navigator's location.
+
+## Evaluation & Metrics
+
+- **NE ↓ (Navigation Error):** shortest navigable distance from the final position to the goal.
+- **SR ↑ (Success Rate):** fraction of episodes satisfying the benchmark's goal and stopping criteria; the success threshold is task-specific. See [R2R](https://arxiv.org/abs/1711.07280) for the standard indoor setup.
+- **SPL ↑ (Success weighted by Path Length):** averages success weighted by the ratio of shortest-path distance to actual path length, with the ratio capped at one. Measures goal-reaching efficiency. [Definition](https://arxiv.org/abs/1807.06757).
+- **CLS ↑ (Coverage weighted by Length Score):** combines reference-path coverage with length consistency to measure instruction-path fidelity. [Definition](https://arxiv.org/abs/1905.12255).
+- **nDTW ↑ / SDTW ↑:** normalized Dynamic Time Warping measures order-sensitive similarity to the reference trajectory; SDTW sets this score to zero for unsuccessful episodes. [Definitions](https://arxiv.org/abs/1907.05446).
+
+**Compare matched protocols:** use the same dataset split, observations, action space, step budget, and success rule. Distinguish online navigation in unknown environments from pre-exploration/prebuilt maps, cross-episode memory, and test-time adaptation. Report oracle assistance and task-specific metrics where applicable; goal success and instruction-path fidelity measure different abilities.
 
 ## Methods
 
