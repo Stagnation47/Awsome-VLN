@@ -29,19 +29,6 @@
 - [Real-World and Generalist Navigation](#generalist-real-world)
 - [Aerial Vision-and-Language Navigation](#aerial-vln)
 
-## Reading Notes
-
-Each paper appears once under its primary research direction. **★** marks the suggested first read: a classic or, for newer directions, a representative starting point.
-
-**DE** = discrete viewpoint-graph navigation; **CE** = continuous-environment navigation; **GoalNav** = goal navigation. DE/CE describe task settings, VLM/VLA describe model roles, and graphs describe representations; these dimensions can overlap. Aerial and real-world navigation describe embodiment or deployment.
-
-Navigation topology encodes traversability, scene graphs encode entities and relations, and instruction graphs encode requested constraints. Compare online unknown-environment navigation, pre-explored maps, and test-time adaptation separately.
-
-Years follow publication years or the original list; **arXiv** identifies the linked preprint. ETPNav is explicitly marked as first released in 2023.
-
-<a id="papers"></a>
-
-<a id="surveys"></a>
 
 ## Surveys
 
